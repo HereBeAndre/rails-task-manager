@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito:400,700&display=swap');
+@import 'bootstrap';
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  margin: 24 auto;
+}
+
+body h1 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
+}
+
