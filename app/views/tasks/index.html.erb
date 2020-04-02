@@ -1,11 +1,13 @@
 <h1>My Tasks</h1>
-<ul class="d-inline">
-  <% @tasks.each do |task| %>
-    <li><%= link_to task.title, task_path(task) %></li>
-    <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete: #{task.title}?" } do %>
-      <i class="fa fa-trash-o" aria-hidden="true"></i>
+<div class="container">
+  <ul class="d-inline">
+    <% @tasks.each do |task| %>
+      <li><%= link_to task.title, task_path(task) %></li>
+      <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete: #{task.title}?" } do %>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
-
-<h3><%= link_to "Create A Task", tasks_new_path(@task) %></h3>
+  </ul>
+  <hr color="white">
+</div>
+<%= link_to "Create A Task", tasks_new_path(@task), class:"btn btn-primary"%>
